@@ -4,7 +4,19 @@
     padding: 0;
 }
 
-#wrap
+
+/* Media Query para dispositivos con una anchura máxima de 768px (tablets y teléfonos) */
+@media only screen and (max-width: 768px) {
+    header {
+        height: 150px; /* Ajuste de altura */
+    }
+
+    header .title {
+        font-size: 20px; /* Reducción adicional del tamaño de fuente */
+    }
+}
+
+.wrap
 {
     max-width: 1200px;
     margin: auto auto;
@@ -13,13 +25,18 @@
 body
 {
     background-color: rgb(3, 7, 18);
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav
 {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
     padding: 10px 0;
 }
 
@@ -53,4 +70,62 @@ header
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center; 
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+header .title
+{
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 60px;
+}
+
+/* Contenedores */
+
+div.content
+{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px 0;
+}
+
+div.content div.text
+{
+    line-height: 25px;
+}
+
+div.lineDivisor
+{
+    margin: 30px auto;
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, 1), rgba(0, 0, 0, .2));
+}
+
+div.content div.text div.listSkill
+{
+    display: inline-flex;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 0 2px;
+    align-items: center;
+    width: fit-content;
+}
+
+
+/* Footer */
+footer
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    color: #ffffff;
 }
